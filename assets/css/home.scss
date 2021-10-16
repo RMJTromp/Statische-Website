@@ -1,0 +1,83 @@
+body[page='home'] {
+  > section {
+
+    &#header {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      max-height: 2500px;
+      position: relative;
+
+      > div.background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://cdn.pixabay.com/photo/2016/11/24/20/48/programming-1857236_960_720.jpg);
+        filter: brightness(.5) opacity(0.1);
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      > div.wrapper {
+        margin: 20px;
+        display: grid;
+        grid-gap: 15px;
+        text-align: center;
+        max-width: 800px;
+
+        > h1#title {
+          text-transform: uppercase;
+          font-size: 4em;
+          font-family: 'Uni Sans Thin', sans-serif;
+          color: white;
+
+          > i {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      > i#scroll {
+        font-size: 2em;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        animation: scroll-bounce 1s infinite;
+        cursor: pointer;
+      }
+    }
+
+    > div.container {
+      > div.information {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 50%;
+
+        > img {
+          max-height: 400px;
+          max-width: 100%;
+          width: -webkit-fill-available;
+        }
+
+        > div.description {
+          display: grid;
+          grid-auto-rows: min-content;
+          grid-gap: 10px;
+          margin: 30px;
+
+          > h1 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import "max-width-900";
+
+@import "home";
+@import "navigation";
+@import "profile";
+@import "documentatie";
+@import "galerij";
+@import "modal";
+
+:root {
+  --primary-color: #e60026;
+  --secondary-color: #ff002b;
+  --tertiary-color: #2a2a2a;
+  --quartiere-color: #232323;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  // scroll bar style
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
+  :hover::-webkit-scrollbar-thumb {
+    background: var(--primary-color)75;
+    border-radius: 4px;
+
+    &:hover { background: #202225; }
+  }
+}
+
+body {
+  background-color: var(--tertiary-color);
+  color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #ff3737;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 12px 35px;
+  display: block;
+  border-radius: 5px;
+  max-width: max-content;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+input, textarea {
+  background-color: var(--quartiere-color);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-width: 5rem;
+  max-height: 15rem;
+}
+
+form {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  width: -webkit-fill-available;
+  grid-gap: 15px;
+
+  > div.form-group {
+    > label, > input, > textarea {
+      display: block;
+      width: -webkit-fill-available;
+    }
+  }
+
+  > button {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+// selection when you select texts
+::selection {
+  background-color: #79484896;
+}
+
+body {
+  > section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
+    > div.container {
+      margin: 20px;
+      max-width: 1200px;
+      position: relative;
+      width: -webkit-fill-available;
+
+      > div.paragraph {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: var(--quartiere-color);
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0;
+
+  &.sticky {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > div.container {
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    width: -webkit-fill-available;
+    max-width: 1200px;
+    margin: 40px 20px;
+    position: relative;
+
+    > ul {
+      list-style: none;
+    }
+  }
+}
+
+:is(h1, h2, h3, h4, h5, h6) > span {
+  color: var(--primary-color);
+}
+
+@keyframes scroll-bounce {
+  from {transform: translateY(-10px)}
+  to {transform: translateY(10px)}
+}
+
+@media only screen and (max-width: 1250px) {
+  body > footer > div.container {
+    grid-auto-flow: row;
+    grid-gap: 20px;
+  }
+
+  nav#navigation {
+    justify-content: left !important;
+
+    > a {
+      display: none;
+
+      &#menu {
+        float: left;
+        display: inline-block !important;
+      }
+    }
+  }
+}
+
+body[page="logboek"]{
+  section > div{
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    width: -webkit-fill-available;
+    max-width: 1200px;
+    gap: 10px;
+    >p {
+      padding: 10px;
+      border: 3px solid var(--primary-color);
+      font-size: 30px;
+
+      &:nth-of-type(1) {
+        border-top-left-radius: 12px;
+      }
+
+      &:nth-of-type(3) {
+        border-top-right-radius: 12px;
+      }
+
+      &:nth-last-of-type(1) {
+        border-bottom-right-radius: 12px;
+      }
+
+      &:nth-last-of-type(3) {
+        border-bottom-left-radius: 12px;
+
+      }
+    }
+  }
+}
+
+

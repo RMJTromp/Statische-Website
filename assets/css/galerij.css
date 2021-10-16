@@ -1,0 +1,73 @@
+body[page=galerij] > section > div.container div.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+}
+body[page=galerij] > section > div.container div.gallery > div.image {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+body[page=galerij] > section > div.container div.gallery > div.image > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  display: none;
+}
+body[page=galerij] > section > div.container div.gallery > div.image > img {
+  width: 100%;
+  height: 100%;
+}
+body[page=galerij] > section > div.container div.gallery > div.image:hover > img {
+  filter: blur(1px) brightness(0.25);
+}
+body[page=galerij] > section > div.container div.gallery > div.image:hover > p {
+  display: block;
+}
+
+div.gallery-wrapper {
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+div.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313131e6;
+}
+
+div.modal > picture {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+}
+
+div.modal > i {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  div.gallery-wrapper > div.gallery {
+    grid-template-columns: repeat(auto-fit, 90vw);
+    grid-template-rows: repeat(auto-fill, 90vw);
+  }
+}
+
+/*# sourceMappingURL=galerij.css.map */

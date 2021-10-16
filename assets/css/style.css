@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@media only screen and (max-width: 900px) {
+  body[page=home] > section > div.container > div.information {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+  }
+  body[page=home] > section > div.container > div.information > div.description {
+    margin: unset;
+  }
+  body[page=home] > section > div.container > div.information > div.description > :is(h1, h2, h3, h4, h5, h6)::before {
+    content: "#";
+    color: #5a5a5a;
+    font-size: 75%;
+    margin-right: 3px;
+  }
+  body[page=home] > section > div.container > div.information > img {
+    display: none;
+  }
+  body[page=home] > section > div.container > div.information button {
+    max-width: unset;
+  }
+}
+body[page=home] > section#header {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-height: 2500px;
+  position: relative;
+}
+body[page=home] > section#header > div.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/24/20/48/programming-1857236_960_720.jpg);
+  filter: brightness(0.5) opacity(0.1);
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body[page=home] > section#header > div.wrapper {
+  margin: 20px;
+  display: grid;
+  grid-gap: 15px;
+  text-align: center;
+  max-width: 800px;
+}
+body[page=home] > section#header > div.wrapper > h1#title {
+  text-transform: uppercase;
+  font-size: 4em;
+  font-family: "Uni Sans Thin", sans-serif;
+  color: white;
+}
+body[page=home] > section#header > div.wrapper > h1#title > i {
+  color: var(--primary-color);
+}
+body[page=home] > section#header > i#scroll {
+  font-size: 2em;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  animation: scroll-bounce 1s infinite;
+  cursor: pointer;
+}
+body[page=home] > section > div.container > div.information {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50%;
+}
+body[page=home] > section > div.container > div.information > img {
+  max-height: 400px;
+  max-width: 100%;
+  width: -webkit-fill-available;
+}
+body[page=home] > section > div.container > div.information > div.description {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 10px;
+  margin: 30px;
+}
+body[page=home] > section > div.container > div.information > div.description > h1 {
+  font-size: 40px;
+}
+
+body > nav#navigation {
+  align-items: center;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+}
+body > nav#navigation > a {
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+}
+body > nav#navigation > a:hover, body > nav#navigation > a[active] {
+  background-color: var(--secondary-color);
+}
+body > nav#navigation > a#menu {
+  display: none;
+}
+body > nav#navigation > a > ul {
+  display: none;
+  color: yellow;
+}
+body > nav#navigation.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+body > nav#navigation.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: block;
+  grid-auto-rows: min-content;
+  overflow-y: auto;
+  text-align: center;
+  padding-top: 59px;
+}
+body > nav#navigation.open > a {
+  display: inline-block !important;
+  width: inherit !important;
+  padding: 20px 0;
+}
+body > nav#navigation.open > a#menu {
+  padding: 20px !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: left;
+  background-color: var(--primary-color);
+}
+body > nav#navigation.open > a#menu:hover {
+  background-color: var(--primary-color);
+}
+
+section.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.profile > div.profile-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fill-available;
+  display: grid;
+  grid-auto-flow: column;
+  max-width: 1200px;
+  grid-gap: 20px;
+}
+section.profile > div.profile-wrapper > div.details {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 120px;
+}
+section.profile > div.profile-wrapper > div.details > div {
+  position: relative;
+  min-width: 469px;
+}
+section.profile > div.profile-wrapper > div.details > div > img:first-child {
+  width: 469px;
+  height: 190px;
+  border-radius: 25px;
+}
+section.profile > div.profile-wrapper > div.details > div > img:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 10px solid var(--tertiary-color);
+}
+section.profile > div.profile-wrapper > div.details > div > svg {
+  border-radius: 25px;
+}
+section.profile > div.profile-wrapper > div.details > h1 {
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+}
+section.profile > div.profile-wrapper > div.details > h1:after {
+  content: " ";
+  background-image: url(../img/nitro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.25em;
+  transform: translateY(4px);
+}
+section.profile > div.profile-wrapper > div.bio {
+  margin: 20px;
+}
+
+body[page=documentatie] > section > div.container {
+  max-width: 1000px;
+}
+body[page=documentatie] > section > div.container > h1 {
+  margin-bottom: 1em;
+}
+body[page=documentatie] > section > div.container > h3 {
+  margin-top: 2em;
+}
+body[page=documentatie] > section > div.container > h4 {
+  margin-top: 1em;
+}
+body[page=documentatie] > section > div.container p {
+  color: #ababab;
+}
+body[page=documentatie] > section > div.container > ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ababab;
+}
+body[page=documentatie] > section > div.container :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: normal;
+}
+body[page=documentatie] > section > div.container :is(h1, h2, h3, h4, h5, h6):is(h1) {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+body[page=documentatie] > section > div.container table {
+  border-spacing: 0;
+  width: inherit;
+  margin: 10px 0;
+  border-right: 2px solid var(--quartiere-color);
+}
+body[page=documentatie] > section > div.container table tr {
+  background: linear-gradient(45deg, var(--quartiere-color), transparent);
+  opacity: 0.8;
+}
+body[page=documentatie] > section > div.container table tr > td {
+  padding: 10px;
+}
+body[page=documentatie] > section > div.container table tr > td:first-of-type {
+  max-width: 25px;
+  text-align: center;
+}
+body[page=documentatie] > section > div.container table tr:hover {
+  background-color: var(--quartiere-color);
+  opacity: 1;
+}
+
+body[page=galerij] > section > div.container div.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+}
+body[page=galerij] > section > div.container div.gallery > div.image {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+body[page=galerij] > section > div.container div.gallery > div.image > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  display: none;
+}
+body[page=galerij] > section > div.container div.gallery > div.image > img {
+  width: 100%;
+  height: 100%;
+}
+body[page=galerij] > section > div.container div.gallery > div.image:hover > img {
+  filter: blur(1px) brightness(0.25);
+}
+body[page=galerij] > section > div.container div.gallery > div.image:hover > p {
+  display: block;
+}
+
+div.gallery-wrapper {
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+div.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313131e6;
+}
+
+div.modal > picture {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+}
+
+div.modal > i {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  div.gallery-wrapper > div.gallery {
+    grid-template-columns: repeat(auto-fit, 90vw);
+    grid-template-rows: repeat(auto-fill, 90vw);
+  }
+}
+div.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313131e6;
+}
+div.modal > i {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
+div.modal > picture {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+}
+
+:root {
+  --primary-color: #e60026;
+  --secondary-color: #ff002b;
+  --tertiary-color: #2a2a2a;
+  --quartiere-color: #232323;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+* ::-webkit-scrollbar {
+  width: 4px;
+}
+* ::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+* :hover::-webkit-scrollbar-thumb {
+  background: var(--primary-color) 75;
+  border-radius: 4px;
+}
+* :hover::-webkit-scrollbar-thumb:hover {
+  background: #202225;
+}
+
+body {
+  background-color: var(--tertiary-color);
+  color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #ff3737;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 12px 35px;
+  display: block;
+  border-radius: 5px;
+  max-width: max-content;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  background-color: var(--quartiere-color);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+}
+input:focus, textarea:focus {
+  outline: unset;
+}
+
+textarea {
+  resize: vertical;
+  min-width: 5rem;
+  max-height: 15rem;
+}
+
+form {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  width: -webkit-fill-available;
+  grid-gap: 15px;
+}
+form > div.form-group > label, form > div.form-group > input, form > div.form-group > textarea {
+  display: block;
+  width: -webkit-fill-available;
+}
+form > button {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+::selection {
+  background-color: #79484896;
+}
+
+body > section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+body > section > div.container {
+  margin: 20px;
+  max-width: 1200px;
+  position: relative;
+  width: -webkit-fill-available;
+}
+body > section > div.container > div.paragraph {
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: var(--quartiere-color);
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0;
+}
+footer.sticky {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+footer > div.container {
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  width: -webkit-fill-available;
+  max-width: 1200px;
+  margin: 40px 20px;
+  position: relative;
+}
+footer > div.container > ul {
+  list-style: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6) > span {
+  color: var(--primary-color);
+}
+
+@keyframes scroll-bounce {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+@media only screen and (max-width: 1250px) {
+  body > footer > div.container {
+    grid-auto-flow: row;
+    grid-gap: 20px;
+  }
+
+  nav#navigation {
+    justify-content: left !important;
+  }
+  nav#navigation > a {
+    display: none;
+  }
+  nav#navigation > a#menu {
+    float: left;
+    display: inline-block !important;
+  }
+}
+body[page=logboek] section > div {
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  width: -webkit-fill-available;
+  max-width: 1200px;
+  gap: 10px;
+}
+body[page=logboek] section > div > p {
+  padding: 10px;
+  border: 3px solid var(--primary-color);
+  font-size: 30px;
+}
+body[page=logboek] section > div > p:nth-of-type(1) {
+  border-top-left-radius: 12px;
+}
+body[page=logboek] section > div > p:nth-of-type(3) {
+  border-top-right-radius: 12px;
+}
+body[page=logboek] section > div > p:nth-last-of-type(1) {
+  border-bottom-right-radius: 12px;
+}
+body[page=logboek] section > div > p:nth-last-of-type(3) {
+  border-bottom-left-radius: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

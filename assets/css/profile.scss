@@ -1,0 +1,73 @@
+section.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >div.profile-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: -webkit-fill-available;
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 1200px;
+    grid-gap: 20px;
+
+    >div.details{
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: 120px;
+      >div{
+        position: relative;
+        min-width: 469px;
+
+        > img {
+          &:first-child {
+            width: 469px;
+            height: 190px;
+            border-radius: 25px;
+          }
+
+          &:nth-child(2) {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 10px solid var(--tertiary-color);
+          }
+        }
+
+        >svg{
+          border-radius: 25px;
+        }
+      }
+
+      > h1 {
+        text-align: center;
+        font-family: 'Fjalla One', sans-serif;
+
+        &:after {
+          content: " ";
+          background-image: url(../img/nitro.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin-left: .25em;
+          transform: translateY(4px);
+        }
+      }
+
+
+    }
+    >div.bio{
+      margin: 20px
+    }
+  }
+}

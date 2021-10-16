@@ -1,0 +1,64 @@
+section.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.profile > div.profile-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fill-available;
+  display: grid;
+  grid-auto-flow: column;
+  max-width: 1200px;
+  grid-gap: 20px;
+}
+section.profile > div.profile-wrapper > div.details {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 120px;
+}
+section.profile > div.profile-wrapper > div.details > div {
+  position: relative;
+  min-width: 469px;
+}
+section.profile > div.profile-wrapper > div.details > div > img:first-child {
+  width: 469px;
+  height: 190px;
+  border-radius: 25px;
+}
+section.profile > div.profile-wrapper > div.details > div > img:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 10px solid var(--tertiary-color);
+}
+section.profile > div.profile-wrapper > div.details > div > svg {
+  border-radius: 25px;
+}
+section.profile > div.profile-wrapper > div.details > h1 {
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+}
+section.profile > div.profile-wrapper > div.details > h1:after {
+  content: " ";
+  background-image: url(../img/nitro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.25em;
+  transform: translateY(4px);
+}
+section.profile > div.profile-wrapper > div.bio {
+  margin: 20px;
+}
+
+/*# sourceMappingURL=profile.css.map */

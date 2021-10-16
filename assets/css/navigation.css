@@ -1,0 +1,59 @@
+body > nav#navigation {
+  align-items: center;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+}
+body > nav#navigation > a {
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+}
+body > nav#navigation > a:hover, body > nav#navigation > a[active] {
+  background-color: var(--secondary-color);
+}
+body > nav#navigation > a#menu {
+  display: none;
+}
+body > nav#navigation > a > ul {
+  display: none;
+  color: yellow;
+}
+body > nav#navigation.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+body > nav#navigation.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: block;
+  grid-auto-rows: min-content;
+  overflow-y: auto;
+  text-align: center;
+  padding-top: 59px;
+}
+body > nav#navigation.open > a {
+  display: inline-block !important;
+  width: inherit !important;
+  padding: 20px 0;
+}
+body > nav#navigation.open > a#menu {
+  padding: 20px !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: left;
+  background-color: var(--primary-color);
+}
+body > nav#navigation.open > a#menu:hover {
+  background-color: var(--primary-color);
+}
+
+/*# sourceMappingURL=navigation.css.map */

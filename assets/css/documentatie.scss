@@ -1,0 +1,64 @@
+body[page="documentatie"] {
+  > section {
+    > div.container {
+      max-width: 1000px;
+
+      > h1 {
+        margin-bottom: 1em;
+      }
+
+      > h3 {
+        margin-top: 2em;
+      }
+
+      > h4 {
+        margin-top: 1em;
+      }
+
+      p {
+        color: #ababab;
+      }
+
+      > ul {
+        margin-left: 1.25rem;
+        margin-bottom: 1rem;
+        color: #ababab;
+      }
+
+      :is(h1, h2, h3, h4, h5, h6) {
+        font-weight: normal;
+
+        &:is(h1) {
+          color: var(--secondary-color);
+          opacity: .8;
+        }
+      }
+
+      table {
+        border-spacing: 0;
+        width: inherit;
+        margin: 10px 0;
+        border-right: 2px solid var(--quartiere-color);
+
+        tr {
+          background: linear-gradient(45deg, var(--quartiere-color), transparent);
+          opacity: .8;
+
+          > td {
+            padding: 10px;
+
+            &:first-of-type {
+              max-width: 25px;
+              text-align: center;
+            }
+          }
+
+          &:hover {
+            background-color: var(--quartiere-color);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

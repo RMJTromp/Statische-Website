@@ -1,0 +1,23 @@
+@media only screen and (max-width: 900px) {
+  body[page=home] > section > div.container > div.information {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+  }
+  body[page=home] > section > div.container > div.information > div.description {
+    margin: unset;
+  }
+  body[page=home] > section > div.container > div.information > div.description > :is(h1, h2, h3, h4, h5, h6)::before {
+    content: "#";
+    color: #5a5a5a;
+    font-size: 75%;
+    margin-right: 3px;
+  }
+  body[page=home] > section > div.container > div.information > img {
+    display: none;
+  }
+  body[page=home] > section > div.container > div.information button {
+    max-width: unset;
+  }
+}
+
+/*# sourceMappingURL=max-width-900.css.map */
