@@ -1,4 +1,15 @@
-const $ = (selector) => document.querySelector(selector);
+const $ = (selector, attributes = {}) => {
+    if(selector.startsWith("<") && selector.endsWith(">")) {
+        const element = document.createElement(selector.substr(1, selector.length - 2));
+        if(typeof attributes === "object" && !Array.isArray(attributes)) {
+            Object.keys(attributes).forEach(key => {
+                element.setAttribute(key, attributes[key]);
+            })
+        }
+        return element;
+    }
+    return document.querySelector(selector);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
