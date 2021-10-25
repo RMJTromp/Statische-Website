@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let page = 1, lastLoad = 0;
     const loadImages = () => {
         // 1 second cooldown
-        if(Date.now() - lastLoad <= 1000)
+        if(Date.now() - lastLoad <= 1000) return;
         lastLoad = Date.now();
 
         fetch(`https://picsum.photos/v2/list?page=${page}`)
