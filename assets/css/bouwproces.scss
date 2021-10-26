@@ -1,0 +1,38 @@
+body[page="bouwproces"] {
+  h2 {
+    font-weight: normal;
+  }
+
+  > section {
+    > div.container {
+      display: grid;
+      grid-gap: 25px;
+      max-width: 1000px;
+
+      > div.a {
+        display: grid;
+        grid-template-columns: 60px auto;
+
+        > div.b {
+          display: grid;
+          justify-content: center;
+          grid-template-rows: 35px auto;
+
+          > i.codicon {
+            font-size: 30px;
+          }
+
+          > div {
+            display: block;width: 5px;background-color: #7070705c;height: 100%;margin: 0 auto;border-radius: 10px;
+          }
+        }
+
+        > div.c {
+          > h2 {
+            margin-left: .5em;
+          }
+        }
+      }
+    }
+  }
+}

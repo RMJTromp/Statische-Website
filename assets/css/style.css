@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import "codicon.css";
 @media only screen and (max-width: 900px) {
   body[page=home] > section > div.container > div.information {
     grid-auto-flow: row;
@@ -358,6 +359,38 @@ div.modal > picture {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 800px;
+}
+
+body[page=bouwproces] h2 {
+  font-weight: normal;
+}
+body[page=bouwproces] > section > div.container {
+  display: grid;
+  grid-gap: 25px;
+  max-width: 1000px;
+}
+body[page=bouwproces] > section > div.container > div.a {
+  display: grid;
+  grid-template-columns: 60px auto;
+}
+body[page=bouwproces] > section > div.container > div.a > div.b {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 35px auto;
+}
+body[page=bouwproces] > section > div.container > div.a > div.b > i.codicon {
+  font-size: 30px;
+}
+body[page=bouwproces] > section > div.container > div.a > div.b > div {
+  display: block;
+  width: 5px;
+  background-color: #7070705c;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+body[page=bouwproces] > section > div.container > div.a > div.c > h2 {
+  margin-left: 0.5em;
 }
 
 :root {
