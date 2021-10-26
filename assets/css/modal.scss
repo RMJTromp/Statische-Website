@@ -1,12 +1,4 @@
-div.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0000009e;
-  z-index: 1001;
-
+x-modal {
   > div.container {
     max-width: 1200px;
 

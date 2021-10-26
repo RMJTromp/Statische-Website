@@ -335,16 +335,7 @@ div.modal > i {
     grid-template-rows: repeat(auto-fill, 90vw);
   }
 }
-div.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0000009e;
-  z-index: 1001;
-}
-div.modal > div.container {
+x-modal > div.container {
   max-width: 1200px;
   position: absolute;
   left: 50%;
@@ -355,7 +346,7 @@ div.modal > div.container {
   width: fit-content;
   border-radius: 5px;
 }
-div.modal > i {
+x-modal > i {
   color: white;
   font-size: 25px;
   position: absolute;
@@ -364,7 +355,7 @@ div.modal > i {
   margin: 20px;
   cursor: pointer;
 }
-div.modal > picture {
+x-modal > picture {
   left: 50%;
   top: 50%;
   position: absolute;
