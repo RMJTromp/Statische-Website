@@ -369,19 +369,19 @@ body[page=bouwproces] > section > div.container {
   grid-gap: 25px;
   max-width: 1000px;
 }
-body[page=bouwproces] > section > div.container > div.a {
+body[page=bouwproces] > section > div.container > div {
   display: grid;
   grid-template-columns: 60px auto;
 }
-body[page=bouwproces] > section > div.container > div.a > div.b {
+body[page=bouwproces] > section > div.container > div > div:first-of-type {
   display: grid;
   justify-content: center;
   grid-template-rows: 35px auto;
 }
-body[page=bouwproces] > section > div.container > div.a > div.b > i.codicon {
+body[page=bouwproces] > section > div.container > div > div:first-of-type > i.codicon {
   font-size: 30px;
 }
-body[page=bouwproces] > section > div.container > div.a > div.b > div {
+body[page=bouwproces] > section > div.container > div > div:first-of-type > div {
   display: block;
   width: 5px;
   background-color: #7070705c;
@@ -389,7 +389,7 @@ body[page=bouwproces] > section > div.container > div.a > div.b > div {
   margin: 0 auto;
   border-radius: 10px;
 }
-body[page=bouwproces] > section > div.container > div.a > div.c > h2 {
+body[page=bouwproces] > section > div.container > div > div:nth-of-type(2) > h2 {
   margin-left: 0.5em;
 }
 

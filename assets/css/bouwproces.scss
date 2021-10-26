@@ -9,11 +9,11 @@ body[page="bouwproces"] {
       grid-gap: 25px;
       max-width: 1000px;
 
-      > div.a {
+      > div {
         display: grid;
         grid-template-columns: 60px auto;
 
-        > div.b {
+        > div:first-of-type {
           display: grid;
           justify-content: center;
           grid-template-rows: 35px auto;
@@ -27,7 +27,7 @@ body[page="bouwproces"] {
           }
         }
 
-        > div.c {
+        > div:nth-of-type(2) {
           > h2 {
             margin-left: .5em;
           }
