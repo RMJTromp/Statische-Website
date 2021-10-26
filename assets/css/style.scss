@@ -11,7 +11,6 @@
 @import "modal";
 @import "bouwproces";
 @import "codicon.css";
-
 :root {
   --primary-color: #e60026;
   --secondary-color: #ff002b;
@@ -25,7 +24,10 @@
 
   // scroll bar style
   ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color); border-radius: 4px;
+
+  }
   :hover::-webkit-scrollbar-thumb {
     background: var(--primary-color)75;
     border-radius: 4px;
@@ -216,5 +218,4 @@ body[page="logboek"]{
     }
   }
 }
-
 
