@@ -4,7 +4,21 @@ div.modal {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #313131e6;
+  background-color: #0000009e;
+  z-index: 1001;
+
+  > div.container {
+    max-width: 1200px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 5px;
+  }
 
   > i {
     color: white;

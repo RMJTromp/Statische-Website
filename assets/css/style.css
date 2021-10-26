@@ -137,7 +137,7 @@ body > nav#navigation.open > a {
   padding: 20px 0;
 }
 body > nav#navigation.open > a#menu {
-  padding: 20px !important;
+  padding: 20px 0 !important;
   position: fixed;
   left: 0;
   top: 0;
@@ -341,7 +341,19 @@ div.modal {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #313131e6;
+  background-color: #0000009e;
+  z-index: 1001;
+}
+div.modal > div.container {
+  max-width: 1200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--tertiary-color);
+  padding: 20px;
+  width: fit-content;
+  border-radius: 5px;
 }
 div.modal > i {
   color: white;

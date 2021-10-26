@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.addEventListener("click", () => {
                 if(navigation.classList.toggle("open")) {
                     body.style.overflow = "hidden";
-                    icon.classList.remove("fa-bars");
-                    icon.classList.add("fa-times");
+                    icon.classList.remove("codicon-menu");
+                    icon.classList.add("codicon-chrome-close");
                 } else {
                     body.style.overflow = "";
-                    icon.classList.remove("fa-times");
-                    icon.classList.add("fa-bars");
+                    icon.classList.remove("codicon-chrome-close");
+                    icon.classList.add("codicon-menu");
                     fixHeader();
                 }
             });
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(window.innerWidth >= 1250 && navigation.classList.contains("open")) {
                     navigation.classList.remove("open");
                     body.style.overflow = "";
-                    icon.classList.remove("fa-times");
-                    icon.classList.add("fa-bars");
+                    icon.classList.remove("codicon-chrome-close");
+                    icon.classList.add("codicon-menu");
                     fixHeader();
                 }
             });
