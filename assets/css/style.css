@@ -394,6 +394,9 @@ x-modal#bronnen-modal ul li:hover {
   background-color: white;
   cursor: pointer;
 }
+x-modal#bronnen-modal ul li:hover > a {
+  color: black;
+}
 
 body[page=tcr] > section > div.container {
   display: grid;
