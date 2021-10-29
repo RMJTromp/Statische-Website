@@ -600,4 +600,8 @@ body[page=logboek] section > div > p:nth-last-of-type(3) {
   border: 3px solid white;
 }
 
+body[page=studie] {
+  background-color: red !important;
+}
+
 /*# sourceMappingURL=style.css.map */
