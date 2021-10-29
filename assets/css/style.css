@@ -388,14 +388,11 @@ x-modal#bronnen-modal ul li {
   border-radius: 10px;
 }
 x-modal#bronnen-modal ul li a {
-  color: #f3f3f3;
+  color: white;
 }
 x-modal#bronnen-modal ul li:hover {
-  background-color: white;
+  background-color: #413f3f;
   cursor: pointer;
-}
-x-modal#bronnen-modal ul li:hover > a {
-  color: black;
 }
 
 body[page=tcr] > section > div.container {

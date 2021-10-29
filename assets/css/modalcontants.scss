@@ -17,17 +17,14 @@ x-modal#bronnen-modal {
       border-radius: 10px;
 
       a {
-        color: #f3f3f3;
+        color: white;
       }
     }
   }
   ul{
     li:hover{
-      background-color: white;
+      background-color: #413f3f;
       cursor: pointer;
-      > a {
-        color: black;
-      }
     }
   }
 
