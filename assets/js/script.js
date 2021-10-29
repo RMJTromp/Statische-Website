@@ -71,15 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     {
-        // footer
-        const footer = $("footer");
-        if(footer != null && footer.offsetTop + footer.offsetHeight !== Math.max(window.innerHeight, body.offsetHeight)) {
-            footer.classList.add("sticky");
-        }
-    }
-
-    {
-        $("x-modal#bronnen-modal").open();
         $("a#bronnen").addEventListener("click", () => {
             $("x-modal#bronnen-modal").open();
         })
