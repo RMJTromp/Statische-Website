@@ -25,6 +25,10 @@ x-modal#bronnen-modal {
     li:hover{
       background-color: white;
       cursor: pointer;
+
+      > a {
+        color: black;
+      }
     }
   }
 
