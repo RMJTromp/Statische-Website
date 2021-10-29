@@ -38,6 +38,13 @@ section.profile{
             width: 200px;
             border-radius: 50%;
             border: 10px solid var(--tertiary-color);
+            background-color: #5e5e5e;
+            object-fit: cover;
+            object-position: top;
+
+            &.rmjtromp {
+              object-position: center;
+            }
           }
         }
 
