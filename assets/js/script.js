@@ -71,8 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     {
-        $("a#bronnen").addEventListener("click", () => {
-            $("x-modal#bronnen-modal").open();
-        })
+        const bronAnchor = $("a#bronnen");
+        if(bronAnchor) bronAnchor.addEventListener("click", () => $("x-modal#bronnen-modal").open());
     }
 });

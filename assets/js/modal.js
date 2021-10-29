@@ -30,6 +30,12 @@ class ModalElement extends HTMLElement {
             if(e.target === startElement && e.target === this && this.isCloseable()) this.close();
             startElement = null;
         });
+
+        const closeButton = $("<i>", {class: "codicon codicon-chrome-close"});
+        this.append(closeButton);
+        closeButton.addEventListener("click", () => {
+            if(this.isCloseable()) this.close();
+        });
     }
 
     isOpen() {
