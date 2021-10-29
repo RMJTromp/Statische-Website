@@ -9,6 +9,23 @@ x-modal#bronnen-modal {
 
   ul {
     font-size: 20px;
+    text-align: center;
+
+    li {
+      list-style: none;
+      padding: 12px 12px;
+      border-radius: 10px;
+
+      a {
+        color: #f3f3f3;
+      }
+    }
+  }
+  ul{
+    li:hover{
+      background-color: white;
+      cursor: pointer;
+    }
   }
 
 }

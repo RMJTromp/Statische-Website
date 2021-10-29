@@ -315,7 +315,7 @@ x-modal > div.container {
   background-color: var(--tertiary-color);
   padding: 20px;
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 x-modal > i {
   color: white;
@@ -374,6 +374,19 @@ x-modal#bronnen-modal h2 {
 }
 x-modal#bronnen-modal ul {
   font-size: 20px;
+  text-align: center;
+}
+x-modal#bronnen-modal ul li {
+  list-style: none;
+  padding: 12px 12px;
+  border-radius: 10px;
+}
+x-modal#bronnen-modal ul li a {
+  color: #f3f3f3;
+}
+x-modal#bronnen-modal ul li:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 body[page=tcr] > section > div.container {
