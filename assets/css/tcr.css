@@ -1,0 +1,7 @@
+body[page=galerij] > section > div.container {
+  display: grid;
+  grid-gap: 50px;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=tcr.css.map */
