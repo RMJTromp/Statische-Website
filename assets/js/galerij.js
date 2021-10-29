@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const closeCurrentModal = () => {
         // remove modal element
-        const currentModal = body.querySelector("div.modal");
-        if(currentModal != null) currentModal.remove();
-
-        // enable scrolling
-        body.style.overflow = "";
+        const currentModal = body.querySelector("x-modal");
+        if(currentModal != null) {
+            currentModal.close();
+            currentModal.remove();
+        }
     }
 
     let page = 1, lastLoad = 0;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     imageWrapper.addEventListener("click", () => {
                         closeCurrentModal();
 
-                        const modal = $("<div>", {class: "modal"});
+                        const modal = new ModalElement();
 
                         const picture = $("<picture>");
 
@@ -59,16 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         modal.append(picture);
 
-                        // if specifically the modal is clicked, close the modal
-                        modal.addEventListener("click", (e) => {
-                            if(e.target === modal) closeCurrentModal();
-                        });
-
-                        // disable scrolling
-                        body.style.overflow = "hidden";
-
                         // append element
                         body.append(modal);
+                        modal.open();
                     });
 
                     gallery.append(imageWrapper);

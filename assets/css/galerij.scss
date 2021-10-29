@@ -1,7 +1,10 @@
 body[page="galerij"] {
   > section {
     > div.container {
-      div.gallery {
+      max-width: 1200px;
+      margin: 50px auto 0;
+
+      > div.gallery {
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(auto-fit, 200px);
@@ -48,56 +51,7 @@ body[page="galerij"] {
   }
 }
 
-div.gallery-wrapper {
-  max-width: 1200px;
-  margin: 50px auto 0;
-}
 
-div.gallery-wrapper > div.gallery {
-}
-
-div.gallery-wrapper > div.gallery > div.image {
-}
-
-div.gallery-wrapper > div.gallery > div.image > p {
-}
-
-div.gallery-wrapper > div.gallery > div.image:hover > img {
-}
-
-div.gallery-wrapper > div.gallery > div.image:hover > p {
-}
-
-div.gallery-wrapper > div.gallery > div.image > img {
-}
-
-div.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #313131e6;
-}
-
-div.modal > picture {
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 800px;
-}
-
-div.modal > i {
-  color: white;
-  font-size: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px;
-  cursor: pointer;
-}
 
 @media screen and (max-width: 425px) {
   div.gallery-wrapper > div.gallery {
