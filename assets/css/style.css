@@ -578,19 +578,30 @@ body[page=logboek] section > div {
 body[page=logboek] section > div > p {
   padding: 10px;
   border: 3px solid var(--primary-color);
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+body[page=logboek] section > div > p:nth-of-type(2) {
+  border: 3px solid white;
+}
+body[page=logboek] section > div > p:nth-last-of-type(2) {
+  border: 3px solid white;
 }
 body[page=logboek] section > div > p:nth-of-type(1) {
   border-top-left-radius: 12px;
+  border: 3px solid white;
 }
 body[page=logboek] section > div > p:nth-of-type(3) {
   border-top-right-radius: 12px;
+  border: 3px solid white;
 }
 body[page=logboek] section > div > p:nth-last-of-type(1) {
   border-bottom-right-radius: 12px;
+  border: 3px solid white;
 }
 body[page=logboek] section > div > p:nth-last-of-type(3) {
   border-bottom-left-radius: 12px;
+  border: 3px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */
