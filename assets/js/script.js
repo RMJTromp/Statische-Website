@@ -77,4 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
             footer.classList.add("sticky");
         }
     }
+
+    {
+        $("x-modal#bronnen-modal").open();
+        $("a#bronnen").addEventListener("click", () => {
+            $("x-modal#bronnen-modal").open();
+        })
+    }
 });

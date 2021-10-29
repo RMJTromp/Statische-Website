@@ -11,12 +11,14 @@
 @import "modal";
 @import "bouwproces";
 @import "codicon.css";
+@import "modalcontants";
 :root {
   --primary-color: #e60026;
   --secondary-color: #ff002b;
   --tertiary-color: #2a2a2a;
   --quartiere-color: #232323;
 }
+
 
 * {
   margin: 0;

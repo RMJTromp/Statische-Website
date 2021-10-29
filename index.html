@@ -100,31 +100,25 @@
                 </ul>
                 <ul>
                     <li>Andere</li>
-                    <li>
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtn">Open Modal</button>
-
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
-                            </div>
-
-                        </div>
-                    </li>
+                    <li><a href="#" id="bronnen">Bronnen</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </footer>
 
-        <div class="modal">
+        <x-modal id="bronnen-modal">
             <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad adipisci aliquam deleniti dicta dignissimos maiores porro quis veritatis.</p>
+                <h2>Bronnen</h2>
+                <ul>
+                    <li><a href="https://google.nl" target="_blank">Google</a></li>
+                    <li><a href="https://undraw.co/illustrations" target="_blank">Undraw</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3schools</a></li>
+                    <li><a href="https://fonts.google.com/" target="_blank">Google fonts</a></li>
+                    <li><a href="https://app.diagrams.net/" target="_blank">Diagrams</a></li>
+                    <li><a href="https://stackoverflow.com/" target="_blank">stackoverflow</a></li>
+                </ul>
             </div>
-        </div>
+        </x-modal>"
 
         <script src="assets/js/script.js"></script>
         <script src="assets/js/modal.js"></script>

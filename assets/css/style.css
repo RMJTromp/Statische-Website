@@ -396,6 +396,15 @@ body[page=bouwproces] > section > div.container > div > div:nth-of-type(2) > h2 
   margin-left: 0.5em;
 }
 
+x-modal#bronnen-modal h2 {
+  font-size: 50px;
+  color: white !important;
+  text-shadow: -2px -2px 0 #c20000, 2px -2px 0 #a80101, -2px 2px 0 #8a0000, 2px 2px 0 #8a0000;
+}
+x-modal#bronnen-modal ul {
+  font-size: 20px;
+}
+
 :root {
   --primary-color: #e60026;
   --secondary-color: #ff002b;
