@@ -187,6 +187,12 @@ section.profile > div.profile-wrapper > div.details > div > img:nth-child(2) {
   width: 200px;
   border-radius: 50%;
   border: 10px solid var(--tertiary-color);
+  background-color: #5e5e5e;
+  object-fit: cover;
+  object-position: top;
+}
+section.profile > div.profile-wrapper > div.details > div > img:nth-child(2).rmjtromp {
+  object-position: center;
 }
 section.profile > div.profile-wrapper > div.details > div > svg {
   border-radius: 25px;
