@@ -115,6 +115,14 @@ form {
   background-color: #79484896;
 }
 
+div.asda {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: right;
+  grid-gap: 20px;
+}
+
 body {
   > section {
     display: flex;
@@ -126,6 +134,18 @@ body {
       max-width: 1200px;
       position: relative;
       width: -webkit-fill-available;
+
+      &.size-xs {
+        max-width: 400px;
+      }
+
+      &.size-sm {
+        max-width: 800px;
+      }
+
+      &.size-md {
+        max-width: 1000px;
+      }
 
       > div.paragraph {
         margin-bottom: 100px;
@@ -236,7 +256,4 @@ body[page="logboek"]{
   }
 }
 
-body[page="studie"]{
-  background-color: red !important;
-}
 
