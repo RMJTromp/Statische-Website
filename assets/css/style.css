@@ -557,11 +557,14 @@ footer > div.container > ul {
 }
 
 @keyframes scroll-bounce {
-  from {
+  0% {
     transform: translateY(-10px);
   }
-  to {
+  50% {
     transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
   }
 }
 @media only screen and (max-width: 1250px) {

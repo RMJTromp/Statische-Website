@@ -187,8 +187,9 @@ footer {
 }
 
 @keyframes scroll-bounce {
-  from {transform: translateY(-10px)}
-  to {transform: translateY(10px)}
+  0% {transform: translateY(-10px)}
+  50% {transform: translateY(10px)}
+  100% {transform: translateY(-10px)}
 }
 
 @media only screen and (max-width: 1250px) {
